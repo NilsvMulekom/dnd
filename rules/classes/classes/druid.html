@@ -1,0 +1,414 @@
+<!DOCTYPE html> <html lang="en-gb"><head>
+<title>Druid</title>
+<base href="../../..">
+<meta name="pathname" content="rules/classes/classes/druid.html">
+<meta name="description" content="Obsidian Vault - Druid">
+<meta property="og:title" content="Druid">
+<meta property="og:description" content="Obsidian Vault - Druid">
+<meta property="og:type" content="website">
+<meta property="og:url" content="rules/classes/classes/druid.html">
+<meta property="og:image" content="undefined">
+<meta charset="UTF-8"><meta property="og:site_name" content="Obsidian Vault"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:calc(2.3em + 2 * var(--sidebar-margin));width:var(--sidebar-width);padding:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row;border-top-right-radius:var(--radius-l)}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse;border-top-left-radius:var(--radius-l)}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:1px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#navbar:not(:empty){display:flex;align-items:center;justify-content:space-between;padding:.5em 1em;width:100%}#main{display:flex;flex-direction:column;height:100%;width:100%;align-items:stretch;justify-content:center}#main-horizontal{display:flex;flex-direction:row;flex-grow:1;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math,table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const n=await fetch(e);if(!n.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await n.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let n=document.createRange().createContextualFragment(o);t.before(n),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(n){let l=o[n],c=n+1;l?(l&&"true"!=l.getAttribute("loaded")||n<o.length&&e(c),n<o.length&&l.addEventListener("load",(()=>e(c)))):n<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager styled-scrollbars show-inline-title show-ribbon is-focused"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer"><div class="header"><h1 class="page-title heading inline-title" id="Druid_0">Druid</h1><div class="data-bar"></div></div><div class="markdown-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-h2"><h2 data-heading="Core Druid Traits" dir="auto" class="heading" id="Core_Druid_Traits_0">Core Druid Traits</h2></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>Primary Ability</strong></th>
+<th dir="ltr">Wisdom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><strong>Hit Point Die</strong></td>
+<td dir="ltr">D8 per Druid level</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Saving Throw Proficiencies</strong></td>
+<td dir="ltr">Intelligence and Wisdom</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Skill Proficiencies</strong></td>
+<td dir="ltr">Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Weapon Proficiencies</strong></td>
+<td dir="ltr">Simple weapons</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Tool Proficiencies</strong></td>
+<td dir="ltr">Herbalism Kit</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Armor Training</strong></td>
+<td dir="ltr">Light armor and Shields</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Starting Equipment</strong></td>
+<td dir="ltr">Choose A or B:  <br>•&nbsp;<strong>(A)</strong>&nbsp;Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP</td>
+</tr>
+<tr>
+<td dir="ltr">Spells</td>
+<td dir="ltr"><a data-href="Druid Spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid Spells</a></td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="Druid Features" dir="auto" class="heading" id="Druid_Features_0">Druid Features</h2></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Level</th>
+<th dir="ltr">Proficiency Bonus</th>
+<th dir="ltr">Class Features</th>
+<th dir="ltr">Wild Shape</th>
+<th dir="ltr">Cantrips</th>
+<th dir="ltr">Prepared Spells</th>
+<th dir="ltr">1st</th>
+<th dir="ltr">2nd</th>
+<th dir="ltr">3rd</th>
+<th dir="ltr">4th</th>
+<th dir="ltr">5th</th>
+<th dir="ltr">6th</th>
+<th dir="ltr">7th</th>
+<th dir="ltr">8th</th>
+<th dir="ltr">9th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"><strong>1</strong></td>
+<td dir="auto">+2</td>
+<td dir="ltr">Spellcasting, Druidic, Primal Order</td>
+<td dir="auto">—</td>
+<td dir="auto">2</td>
+<td dir="auto">4</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>2</strong></td>
+<td dir="auto">+2</td>
+<td dir="ltr">Wild Shape, Wild Companion</td>
+<td dir="auto">2</td>
+<td dir="auto">2</td>
+<td dir="auto">5</td>
+<td dir="auto">3</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>3</strong></td>
+<td dir="auto">+2</td>
+<td dir="ltr">Druid Subclass</td>
+<td dir="auto">2</td>
+<td dir="auto">2</td>
+<td dir="auto">6</td>
+<td dir="auto">4</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>4</strong></td>
+<td dir="auto">+2</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">2</td>
+<td dir="auto">3</td>
+<td dir="auto">7</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>5</strong></td>
+<td dir="auto">+3</td>
+<td dir="ltr">Wild Resurgence</td>
+<td dir="auto">2</td>
+<td dir="auto">3</td>
+<td dir="auto">9</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>6</strong></td>
+<td dir="auto">+3</td>
+<td dir="ltr">Subclass feature</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">10</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>7</strong></td>
+<td dir="auto">+3</td>
+<td dir="ltr">Elemental Fury</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">11</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>8</strong></td>
+<td dir="auto">+3</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">12</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>9</strong></td>
+<td dir="auto">+4</td>
+<td dir="auto">—</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">14</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>10</strong></td>
+<td dir="auto">+4</td>
+<td dir="ltr">Subclass feature</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">15</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>11</strong></td>
+<td dir="auto">+4</td>
+<td dir="auto">—</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">16</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>12</strong></td>
+<td dir="auto">+4</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">16</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>13</strong></td>
+<td dir="auto">+5</td>
+<td dir="auto">—</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">17</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>14</strong></td>
+<td dir="auto">+5</td>
+<td dir="ltr">Subclass feature</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">17</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>15</strong></td>
+<td dir="auto">+5</td>
+<td dir="ltr">Improved Elemental Fury</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">18</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>16</strong></td>
+<td dir="auto">+5</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">18</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="auto"><strong>17</strong></td>
+<td dir="auto">+6</td>
+<td dir="auto">—</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">19</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+<tr>
+<td dir="auto"><strong>18</strong></td>
+<td dir="auto">+6</td>
+<td dir="ltr">Beast Spells</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">20</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+<tr>
+<td dir="auto"><strong>19</strong></td>
+<td dir="auto">+6</td>
+<td dir="ltr">Epic Boon</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">21</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+<tr>
+<td dir="auto"><strong>20</strong></td>
+<td dir="auto">+6</td>
+<td dir="ltr">Archdruid</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">22</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="Level 1: Druidic" dir="auto" class="heading" id="Level_1_Druidic_0">Level 1: Druidic</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Druidic" src="rules/classes/class-abilities/druid/druidic.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"></span></span></div><div class="el-h2"><h2 data-heading="Level 1: Primal Order" dir="auto" class="heading" id="Level_1_Primal_Order_0">Level 1: Primal Order</h2></div><div class="el-p"><p dir="auto">You have dedicated yourself to one of the following sacred roles of your choice.</p></div><div class="el-h3"><h3 data-heading="Magician" dir="auto" class="heading" id="Magician_0">Magician</h3></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Magician" src="rules/classes/class-abilities/druid/magician.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"></span></span></div><div class="el-h3"><h3 data-heading="Warden" dir="auto" class="heading" id="Warden_0">Warden</h3></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Warden" src="rules/classes/class-abilities/druid/warden.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"></span></span></div><div class="el-h2"><h2 data-heading="Level 1: Spellcasting" dir="auto" class="heading" id="Level_1_Spellcasting_0">Level 1: Spellcasting</h2></div><div class="el-p"><p dir="auto">You have learned to cast spells through studying the mystical forces of nature. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Druid spells, which appear on the <a data-href="Druid spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid spells</a> list later in the class's description.</p></div><div class="el-h3"><h3 data-heading="Cantrips" dir="auto" class="heading" id="Cantrips_0">Cantrips</h3></div><div class="el-p"><p dir="auto">You know two cantrips of your choice from the <a data-href="Druid spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid spells</a> list. <a data-href="Druidcraft" href="rules/spells/spells/druidcraft.html" class="internal-link" target="_self" rel="noopener nofollow">Druidcraft</a> and <a data-href="Produce Flame" href="rules/spells/spells/produce-flame.html" class="internal-link" target="_self" rel="noopener nofollow">Produce Flame</a> are recommended.</p></div><div class="el-p"><p dir="auto">Whenever you gain a Druid level, you can replace one of your cantrips with another cantrip of your choice from the <a data-href="Druid spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid spells</a> list.</p></div><div class="el-p"><p dir="auto">When you reach Druid levels 4 and 10, you learn another cantrip of your choice from the <a data-href="Druid spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid spells</a> list, as shown in the Cantrips column of the Druid Features table.</p></div><div class="el-h3"><h3 data-heading="Spell Slots" dir="auto" class="heading" id="Spell_Slots_0">Spell Slots</h3></div><div class="el-p"><p dir="auto">The Druid Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.</p></div><div class="el-h3"><h3 data-heading="Prepared Spells of Level 1+" dir="auto" class="heading" id="Prepared_Spells_of_Level_1+_0">Prepared Spells of Level 1+</h3></div><div class="el-p"><p dir="auto">You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the <a data-href="Druid spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid spells</a> list. <a data-href="Animal Friendship" href="rules/spells/spells/animal-friendship.html" class="internal-link" target="_self" rel="noopener nofollow">Animal Friendship</a>, <a data-href="Cure Wounds" href="rules/spells/spells/cure-wounds.html" class="internal-link" target="_self" rel="noopener nofollow">Cure Wounds</a>, <a data-href="Faerie Fire" href="rules/spells/spells/faerie-fire.html" class="internal-link" target="_self" rel="noopener nofollow">Faerie Fire</a>, and <a data-href="Thunderwave" href="rules/spells/spells/thunderwave.html" class="internal-link" target="_self" rel="noopener nofollow">Thunderwave</a> are recommended.</p></div><div class="el-p"><p dir="auto">The number of spells on your list increases as you gain Druid levels, as shown in the Prepared Spells column of the Druid Features table. Whenever that number increases, choose additional spells from the <a data-href="Druid spells" href="rules/spells/druid-spells.html" class="internal-link" target="_self" rel="noopener nofollow">Druid spells</a> list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 3 Druid, your list of prepared spells can include six spells of levels 1 and 2 in any combination.</p></div><div class="el-p"><p dir="auto">If another Druid feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Druid spells for you.</p></div><div class="el-h3"><h3 data-heading="Changing Your Prepared Spells" dir="auto" class="heading" id="Changing_Your_Prepared_Spells_0">Changing Your Prepared Spells</h3></div><div class="el-p"><p dir="auto">Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells with other Druid spells for which you have spell slots.</p></div><div class="el-h3"><h3 data-heading="Spellcasting Ability" dir="auto" class="heading" id="Spellcasting_Ability_0">Spellcasting Ability</h3></div><div class="el-p"><p dir="auto">Wisdom is your spellcasting ability for your Druid spells.</p></div><div class="el-h3"><h3 data-heading="Spellcasting Focus" dir="auto" class="heading" id="Spellcasting_Focus_0">Spellcasting Focus</h3></div><div class="el-p"><p dir="auto">You can use a <a data-href="Druidic Focus" href="rules/equipment/adventuring-gear/items/druidic-focus.html" class="internal-link" target="_self" rel="noopener nofollow">Druidic Focus</a> as a Spellcasting Focus for your Druid spells.</p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item mod-collapsible" data-depth="1"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/classes/druid.html#Druid_0" data-path="#Druid_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Druid">Druid</div></a><div class="tree-item-children"><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Core_Druid_Traits_0" data-path="#Core_Druid_Traits_0"><div class="tree-item-inner heading-link" heading-name="Core Druid Traits">Core Druid Traits</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Druid_Features_0" data-path="#Druid_Features_0"><div class="tree-item-inner heading-link" heading-name="Druid Features">Druid Features</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Level_1_Druidic_0" data-path="#Level_1_Druidic_0"><div class="tree-item-inner heading-link" heading-name="Level 1: Druidic">Level 1: Druidic</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/classes/druid.html#Level_1_Primal_Order_0" data-path="#Level_1_Primal_Order_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 1: Primal Order">Level 1: Primal Order</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Magician_0" data-path="#Magician_0"><div class="tree-item-inner heading-link" heading-name="Magician">Magician</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Warden_0" data-path="#Warden_0"><div class="tree-item-inner heading-link" heading-name="Warden">Warden</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/classes/druid.html#Level_1_Spellcasting_0" data-path="#Level_1_Spellcasting_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 1: Spellcasting">Level 1: Spellcasting</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Cantrips_0" data-path="#Cantrips_0"><div class="tree-item-inner heading-link" heading-name="Cantrips">Cantrips</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Spell_Slots_0" data-path="#Spell_Slots_0"><div class="tree-item-inner heading-link" heading-name="Spell Slots">Spell Slots</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Prepared_Spells_of_Level_1+_0" data-path="#Prepared_Spells_of_Level_1+_0"><div class="tree-item-inner heading-link" heading-name="Prepared Spells of Level 1+">Prepared Spells of Level 1+</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Changing_Your_Prepared_Spells_0" data-path="#Changing_Your_Prepared_Spells_0"><div class="tree-item-inner heading-link" heading-name="Changing Your Prepared Spells">Changing Your Prepared Spells</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Spellcasting_Ability_0" data-path="#Spellcasting_Ability_0"><div class="tree-item-inner heading-link" heading-name="Spellcasting Ability">Spellcasting Ability</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="rules/classes/classes/druid.html#Spellcasting_Focus_0" data-path="#Spellcasting_Focus_0"><div class="tree-item-inner heading-link" heading-name="Spellcasting Focus">Spellcasting Focus</div></a><div class="tree-item-children"></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></div></body></html>

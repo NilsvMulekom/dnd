@@ -1,0 +1,862 @@
+<!DOCTYPE html> <html lang="en-gb"><head>
+<title>Bard Spells</title>
+<base href="../..">
+<meta name="pathname" content="rules/spells/bard-spells.html">
+<meta name="description" content="Obsidian Vault - Bard Spells">
+<meta property="og:title" content="Bard Spells">
+<meta property="og:description" content="Obsidian Vault - Bard Spells">
+<meta property="og:type" content="website">
+<meta property="og:url" content="rules/spells/bard-spells.html">
+<meta property="og:image" content="undefined">
+<meta charset="UTF-8"><meta property="og:site_name" content="Obsidian Vault"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:calc(2.3em + 2 * var(--sidebar-margin));width:var(--sidebar-width);padding:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row;border-top-right-radius:var(--radius-l)}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse;border-top-left-radius:var(--radius-l)}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:1px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#navbar:not(:empty){display:flex;align-items:center;justify-content:space-between;padding:.5em 1em;width:100%}#main{display:flex;flex-direction:column;height:100%;width:100%;align-items:stretch;justify-content:center}#main-horizontal{display:flex;flex-direction:row;flex-grow:1;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math,table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const n=await fetch(e);if(!n.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await n.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let n=document.createRange().createContextualFragment(o);t.before(n),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(n){let l=o[n],c=n+1;l?(l&&"true"!=l.getAttribute("loaded")||n<o.length&&e(c),n<o.length&&l.addEventListener("load",(()=>e(c)))):n<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager styled-scrollbars show-inline-title show-ribbon is-focused"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><h1 class="page-title heading inline-title" id="Bard_Spells_0">Bard Spells</h1><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Level</th>
+<th dir="ltr">Spell</th>
+<th dir="ltr">School</th>
+<th dir="ltr">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Blade Ward" href="rules/spells/spells/blade-ward.html" class="internal-link" target="_self" rel="noopener nofollow">Blade Ward</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Dancing Lights" href="rules/spells/spells/dancing-lights.html" class="internal-link" target="_self" rel="noopener nofollow">Dancing Lights</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Friends" href="rules/spells/spells/friends.html" class="internal-link" target="_self" rel="noopener nofollow">Friends</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Rules/Spells/Spells/Light" href="rules/spells/spells/light.html" class="internal-link" target="_self" rel="noopener nofollow">Rules/Spells/Spells/Light</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Mage Hand" href="rules/spells/spells/mage-hand.html" class="internal-link" target="_self" rel="noopener nofollow">Mage Hand</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Mending" href="rules/spells/spells/mending.html" class="internal-link" target="_self" rel="noopener nofollow">Mending</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Message" href="rules/spells/spells/message.html" class="internal-link" target="_self" rel="noopener nofollow">Message</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Minor Illusion" href="rules/spells/spells/minor-illusion.html" class="internal-link" target="_self" rel="noopener nofollow">Minor Illusion</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Prestidigitation" href="rules/spells/spells/prestidigitation.html" class="internal-link" target="_self" rel="noopener nofollow">Prestidigitation</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Starry Wisp" href="rules/spells/spells/starry-wisp.html" class="internal-link" target="_self" rel="noopener nofollow">Starry Wisp</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Thunderclap" href="rules/spells/spells/thunderclap.html" class="internal-link" target="_self" rel="noopener nofollow">Thunderclap</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="True Strike" href="rules/spells/spells/true-strike.html" class="internal-link" target="_self" rel="noopener nofollow">True Strike</a></td>
+<td dir="ltr">Divination</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Cantrip</td>
+<td dir="ltr"><a data-href="Vicious Mockery" href="rules/spells/spells/vicious-mockery.html" class="internal-link" target="_self" rel="noopener nofollow">Vicious Mockery</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Animal Friendship" href="rules/spells/spells/animal-friendship.html" class="internal-link" target="_self" rel="noopener nofollow">Animal Friendship</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Bane" href="rules/spells/spells/bane.html" class="internal-link" target="_self" rel="noopener nofollow">Bane</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Charm Person" href="rules/spells/spells/charm-person.html" class="internal-link" target="_self" rel="noopener nofollow">Charm Person</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Color Spray" href="rules/spells/spells/color-spray.html" class="internal-link" target="_self" rel="noopener nofollow">Color Spray</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Command" href="rules/spells/spells/command.html" class="internal-link" target="_self" rel="noopener nofollow">Command</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Comprehend Languages" href="rules/spells/spells/comprehend-languages.html" class="internal-link" target="_self" rel="noopener nofollow">Comprehend Languages</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Cure Wounds" href="rules/spells/spells/cure-wounds.html" class="internal-link" target="_self" rel="noopener nofollow">Cure Wounds</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Detect Magic" href="rules/spells/spells/detect-magic.html" class="internal-link" target="_self" rel="noopener nofollow">Detect Magic</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C, R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Disguise Self" href="rules/spells/spells/disguise-self.html" class="internal-link" target="_self" rel="noopener nofollow">Disguise Self</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Dissonant Whispers" href="rules/spells/spells/dissonant-whispers.html" class="internal-link" target="_self" rel="noopener nofollow">Dissonant Whispers</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Faerie Fire" href="rules/spells/spells/faerie-fire.html" class="internal-link" target="_self" rel="noopener nofollow">Faerie Fire</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Feather Fall" href="rules/spells/spells/feather-fall.html" class="internal-link" target="_self" rel="noopener nofollow">Feather Fall</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Healing Word" href="rules/spells/spells/healing-word.html" class="internal-link" target="_self" rel="noopener nofollow">Healing Word</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Heroism" href="rules/spells/spells/heroism.html" class="internal-link" target="_self" rel="noopener nofollow">Heroism</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Identify" href="rules/spells/spells/identify.html" class="internal-link" target="_self" rel="noopener nofollow">Identify</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">R, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Illusory Script" href="rules/spells/spells/illusory-script.html" class="internal-link" target="_self" rel="noopener nofollow">Illusory Script</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">R, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Longstrider" href="rules/spells/spells/longstrider.html" class="internal-link" target="_self" rel="noopener nofollow">Longstrider</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Silent Image" href="rules/spells/spells/silent-image.html" class="internal-link" target="_self" rel="noopener nofollow">Silent Image</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Sleep" href="rules/spells/spells/sleep.html" class="internal-link" target="_self" rel="noopener nofollow">Sleep</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Speak with Animals" href="rules/spells/spells/speak-with-animals.html" class="internal-link" target="_self" rel="noopener nofollow">Speak with Animals</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Tasha's Hideous Laughter" href="rules/spells/spells/tasha's-hideous-laughter.html" class="internal-link" target="_self" rel="noopener nofollow">Tasha's Hideous Laughter</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Thunderwave" href="rules/spells/spells/thunderwave.html" class="internal-link" target="_self" rel="noopener nofollow">Thunderwave</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 1</td>
+<td dir="ltr"><a data-href="Unseen Servant" href="rules/spells/spells/unseen-servant.html" class="internal-link" target="_self" rel="noopener nofollow">Unseen Servant</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Aid" href="rules/spells/spells/aid.html" class="internal-link" target="_self" rel="noopener nofollow">Aid</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Animal Messenger" href="rules/spells/spells/animal-messenger.html" class="internal-link" target="_self" rel="noopener nofollow">Animal Messenger</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="BlindnessDeafness" href="rules/spells/spells/blindnessdeafness.html" class="internal-link" target="_self" rel="noopener nofollow">BlindnessDeafness</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Calm Emotions" href="rules/spells/spells/calm-emotions.html" class="internal-link" target="_self" rel="noopener nofollow">Calm Emotions</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Cloud of Daggers" href="rules/spells/spells/cloud-of-daggers.html" class="internal-link" target="_self" rel="noopener nofollow">Cloud of Daggers</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Crown of Madness" href="rules/spells/spells/crown-of-madness.html" class="internal-link" target="_self" rel="noopener nofollow">Crown of Madness</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Detect Thoughts" href="rules/spells/spells/detect-thoughts.html" class="internal-link" target="_self" rel="noopener nofollow">Detect Thoughts</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Enhance Ability" href="rules/spells/spells/enhance-ability.html" class="internal-link" target="_self" rel="noopener nofollow">Enhance Ability</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="EnlargeReduce" href="rules/spells/spells/enlargereduce.html" class="internal-link" target="_self" rel="noopener nofollow">EnlargeReduce</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Enthrall" href="rules/spells/spells/enthrall.html" class="internal-link" target="_self" rel="noopener nofollow">Enthrall</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Heat Metal" href="rules/spells/spells/heat-metal.html" class="internal-link" target="_self" rel="noopener nofollow">Heat Metal</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Hold Person" href="rules/spells/spells/hold-person.html" class="internal-link" target="_self" rel="noopener nofollow">Hold Person</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Invisibility" href="rules/spells/spells/invisibility.html" class="internal-link" target="_self" rel="noopener nofollow">Invisibility</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Knock" href="rules/spells/spells/knock.html" class="internal-link" target="_self" rel="noopener nofollow">Knock</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Lesser Restoration" href="rules/spells/spells/lesser-restoration.html" class="internal-link" target="_self" rel="noopener nofollow">Lesser Restoration</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Locate Animals or Plants" href="rules/spells/spells/locate-animals-or-plants.html" class="internal-link" target="_self" rel="noopener nofollow">Locate Animals or Plants</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Locate Object" href="rules/spells/spells/locate-object.html" class="internal-link" target="_self" rel="noopener nofollow">Locate Object</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Magic Mouth" href="rules/spells/spells/magic-mouth.html" class="internal-link" target="_self" rel="noopener nofollow">Magic Mouth</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">R, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Mirror Image" href="rules/spells/spells/mirror-image.html" class="internal-link" target="_self" rel="noopener nofollow">Mirror Image</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Phantasmal Force" href="rules/spells/spells/phantasmal-force.html" class="internal-link" target="_self" rel="noopener nofollow">Phantasmal Force</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="See Invisibility" href="rules/spells/spells/see-invisibility.html" class="internal-link" target="_self" rel="noopener nofollow">See Invisibility</a></td>
+<td dir="ltr">Divination</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Shatter" href="rules/spells/spells/shatter.html" class="internal-link" target="_self" rel="noopener nofollow">Shatter</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Silence" href="rules/spells/spells/silence.html" class="internal-link" target="_self" rel="noopener nofollow">Silence</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C, R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Suggestion" href="rules/spells/spells/suggestion.html" class="internal-link" target="_self" rel="noopener nofollow">Suggestion</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 2</td>
+<td dir="ltr"><a data-href="Zone of Truth" href="rules/spells/spells/zone-of-truth.html" class="internal-link" target="_self" rel="noopener nofollow">Zone of Truth</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Bestow Curse" href="rules/spells/spells/bestow-curse.html" class="internal-link" target="_self" rel="noopener nofollow">Bestow Curse</a></td>
+<td dir="ltr">Necromancy</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Clairvoyance" href="rules/spells/spells/clairvoyance.html" class="internal-link" target="_self" rel="noopener nofollow">Clairvoyance</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Dispel Magic" href="rules/spells/spells/dispel-magic.html" class="internal-link" target="_self" rel="noopener nofollow">Dispel Magic</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Fear" href="rules/spells/spells/fear.html" class="internal-link" target="_self" rel="noopener nofollow">Fear</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Feign Death" href="rules/spells/spells/feign-death.html" class="internal-link" target="_self" rel="noopener nofollow">Feign Death</a></td>
+<td dir="ltr">Necromancy</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Glyph of Warding" href="rules/spells/spells/glyph-of-warding.html" class="internal-link" target="_self" rel="noopener nofollow">Glyph of Warding</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Hypnotic Pattern" href="rules/spells/spells/hypnotic-pattern.html" class="internal-link" target="_self" rel="noopener nofollow">Hypnotic Pattern</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Leomund's Tiny Hut" href="rules/spells/spells/leomund's-tiny-hut.html" class="internal-link" target="_self" rel="noopener nofollow">Leomund's Tiny Hut</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Major Image" href="rules/spells/spells/major-image.html" class="internal-link" target="_self" rel="noopener nofollow">Major Image</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Mass Healing Word" href="rules/spells/spells/mass-healing-word.html" class="internal-link" target="_self" rel="noopener nofollow">Mass Healing Word</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Nondetection" href="rules/spells/spells/nondetection.html" class="internal-link" target="_self" rel="noopener nofollow">Nondetection</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Plant Growth" href="rules/spells/spells/plant-growth.html" class="internal-link" target="_self" rel="noopener nofollow">Plant Growth</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Sending" href="rules/spells/spells/sending.html" class="internal-link" target="_self" rel="noopener nofollow">Sending</a></td>
+<td dir="ltr">Divination</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Rules/Spells/Spells/Slow" href="rules/spells/spells/slow.html" class="internal-link" target="_self" rel="noopener nofollow">Rules/Spells/Spells/Slow</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Speak with Dead" href="rules/spells/spells/speak-with-dead.html" class="internal-link" target="_self" rel="noopener nofollow">Speak with Dead</a></td>
+<td dir="ltr">Necromancy</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Speak with Plants" href="rules/spells/spells/speak-with-plants.html" class="internal-link" target="_self" rel="noopener nofollow">Speak with Plants</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Stinking Cloud" href="rules/spells/spells/stinking-cloud.html" class="internal-link" target="_self" rel="noopener nofollow">Stinking Cloud</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 3</td>
+<td dir="ltr"><a data-href="Tongues" href="rules/spells/spells/tongues.html" class="internal-link" target="_self" rel="noopener nofollow">Tongues</a></td>
+<td dir="ltr">Divination</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Charm Monster" href="rules/spells/spells/charm-monster.html" class="internal-link" target="_self" rel="noopener nofollow">Charm Monster</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Compulsion" href="rules/spells/spells/compulsion.html" class="internal-link" target="_self" rel="noopener nofollow">Compulsion</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Confusion" href="rules/spells/spells/confusion.html" class="internal-link" target="_self" rel="noopener nofollow">Confusion</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Dimension Door" href="rules/spells/spells/dimension-door.html" class="internal-link" target="_self" rel="noopener nofollow">Dimension Door</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Fount of Moonlight" href="rules/spells/spells/fount-of-moonlight.html" class="internal-link" target="_self" rel="noopener nofollow">Fount of Moonlight</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Freedom of Movement" href="rules/spells/spells/freedom-of-movement.html" class="internal-link" target="_self" rel="noopener nofollow">Freedom of Movement</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Greater Invisibility" href="rules/spells/spells/greater-invisibility.html" class="internal-link" target="_self" rel="noopener nofollow">Greater Invisibility</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Hallucinatory Terrain" href="rules/spells/spells/hallucinatory-terrain.html" class="internal-link" target="_self" rel="noopener nofollow">Hallucinatory Terrain</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Locate Creature" href="rules/spells/spells/locate-creature.html" class="internal-link" target="_self" rel="noopener nofollow">Locate Creature</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Phantasmal Killer" href="rules/spells/spells/phantasmal-killer.html" class="internal-link" target="_self" rel="noopener nofollow">Phantasmal Killer</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 4</td>
+<td dir="ltr"><a data-href="Polymorph" href="rules/spells/spells/polymorph.html" class="internal-link" target="_self" rel="noopener nofollow">Polymorph</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Animate Objects" href="rules/spells/spells/animate-objects.html" class="internal-link" target="_self" rel="noopener nofollow">Animate Objects</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Awaken" href="rules/spells/spells/awaken.html" class="internal-link" target="_self" rel="noopener nofollow">Awaken</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Dominate Person" href="rules/spells/spells/dominate-person.html" class="internal-link" target="_self" rel="noopener nofollow">Dominate Person</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Dream" href="rules/spells/spells/dream.html" class="internal-link" target="_self" rel="noopener nofollow">Dream</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Geas" href="rules/spells/spells/geas.html" class="internal-link" target="_self" rel="noopener nofollow">Geas</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Greater Restoration" href="rules/spells/spells/greater-restoration.html" class="internal-link" target="_self" rel="noopener nofollow">Greater Restoration</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Hold Monster" href="rules/spells/spells/hold-monster.html" class="internal-link" target="_self" rel="noopener nofollow">Hold Monster</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Legend Lore" href="rules/spells/spells/legend-lore.html" class="internal-link" target="_self" rel="noopener nofollow">Legend Lore</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Mass Cure Wounds" href="rules/spells/spells/mass-cure-wounds.html" class="internal-link" target="_self" rel="noopener nofollow">Mass Cure Wounds</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Mislead" href="rules/spells/spells/mislead.html" class="internal-link" target="_self" rel="noopener nofollow">Mislead</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Modify Memory" href="rules/spells/spells/modify-memory.html" class="internal-link" target="_self" rel="noopener nofollow">Modify Memory</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Planar Binding" href="rules/spells/spells/planar-binding.html" class="internal-link" target="_self" rel="noopener nofollow">Planar Binding</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Raise Dead" href="rules/spells/spells/raise-dead.html" class="internal-link" target="_self" rel="noopener nofollow">Raise Dead</a></td>
+<td dir="ltr">Necromancy</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Rary's Telepathic Bond" href="rules/spells/spells/rary's-telepathic-bond.html" class="internal-link" target="_self" rel="noopener nofollow">Rary's Telepathic Bond</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">R</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Scrying" href="rules/spells/spells/scrying.html" class="internal-link" target="_self" rel="noopener nofollow">Scrying</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Seeming" href="rules/spells/spells/seeming.html" class="internal-link" target="_self" rel="noopener nofollow">Seeming</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Synaptic Static" href="rules/spells/spells/synaptic-static.html" class="internal-link" target="_self" rel="noopener nofollow">Synaptic Static</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Teleportation Circle" href="rules/spells/spells/teleportation-circle.html" class="internal-link" target="_self" rel="noopener nofollow">Teleportation Circle</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 5</td>
+<td dir="ltr"><a data-href="Yolande's Regal Presence" href="rules/spells/spells/yolande's-regal-presence.html" class="internal-link" target="_self" rel="noopener nofollow">Yolande's Regal Presence</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Eyebite" href="rules/spells/spells/eyebite.html" class="internal-link" target="_self" rel="noopener nofollow">Eyebite</a></td>
+<td dir="ltr">Necromancy</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Find the Path" href="rules/spells/spells/find-the-path.html" class="internal-link" target="_self" rel="noopener nofollow">Find the Path</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">C, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Guards and Wards" href="rules/spells/spells/guards-and-wards.html" class="internal-link" target="_self" rel="noopener nofollow">Guards and Wards</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Heroes' Feast" href="rules/spells/spells/heroes'-feast.html" class="internal-link" target="_self" rel="noopener nofollow">Heroes' Feast</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Mass Suggestion" href="rules/spells/spells/mass-suggestion.html" class="internal-link" target="_self" rel="noopener nofollow">Mass Suggestion</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Otto's Irresistible Dance" href="rules/spells/spells/otto's-irresistible-dance.html" class="internal-link" target="_self" rel="noopener nofollow">Otto's Irresistible Dance</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="Programmed Illusion" href="rules/spells/spells/programmed-illusion.html" class="internal-link" target="_self" rel="noopener nofollow">Programmed Illusion</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 6</td>
+<td dir="ltr"><a data-href="True Seeing" href="rules/spells/spells/true-seeing.html" class="internal-link" target="_self" rel="noopener nofollow">True Seeing</a></td>
+<td dir="ltr">Divination</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Etherealness" href="rules/spells/spells/etherealness.html" class="internal-link" target="_self" rel="noopener nofollow">Etherealness</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Forcecage" href="rules/spells/spells/forcecage.html" class="internal-link" target="_self" rel="noopener nofollow">Forcecage</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="ltr">C, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Mirage Arcane" href="rules/spells/spells/mirage-arcane.html" class="internal-link" target="_self" rel="noopener nofollow">Mirage Arcane</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Mordenkainen's Magnificent Mansion" href="rules/spells/spells/mordenkainen's-magnificent-mansion.html" class="internal-link" target="_self" rel="noopener nofollow">Mordenkainen's Magnificent Mansion</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Mordenkainen's Sword" href="rules/spells/spells/mordenkainen's-sword.html" class="internal-link" target="_self" rel="noopener nofollow">Mordenkainen's Sword</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="ltr">C, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Power Word Fortify" href="rules/spells/spells/power-word-fortify.html" class="internal-link" target="_self" rel="noopener nofollow">Power Word Fortify</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Prismatic Spray" href="rules/spells/spells/prismatic-spray.html" class="internal-link" target="_self" rel="noopener nofollow">Prismatic Spray</a></td>
+<td dir="ltr">Evocation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Project Image" href="rules/spells/spells/project-image.html" class="internal-link" target="_self" rel="noopener nofollow">Project Image</a></td>
+<td dir="ltr">Illusion</td>
+<td dir="ltr">C, M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Regenerate" href="rules/spells/spells/regenerate.html" class="internal-link" target="_self" rel="noopener nofollow">Regenerate</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Resurrection" href="rules/spells/spells/resurrection.html" class="internal-link" target="_self" rel="noopener nofollow">Resurrection</a></td>
+<td dir="ltr">Necromancy</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Symbol" href="rules/spells/spells/symbol.html" class="internal-link" target="_self" rel="noopener nofollow">Symbol</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="ltr">M</td>
+</tr>
+<tr>
+<td dir="ltr">Level 7</td>
+<td dir="ltr"><a data-href="Teleport" href="rules/spells/spells/teleport.html" class="internal-link" target="_self" rel="noopener nofollow">Teleport</a></td>
+<td dir="ltr">Conjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 8</td>
+<td dir="ltr"><a data-href="AntipathySympathy" href="rules/spells/spells/antipathysympathy.html" class="internal-link" target="_self" rel="noopener nofollow">AntipathySympathy</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 8</td>
+<td dir="ltr"><a data-href="Befuddlement" href="rules/spells/spells/befuddlement.html" class="internal-link" target="_self" rel="noopener nofollow">Befuddlement</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 8</td>
+<td dir="ltr"><a data-href="Dominate Monster" href="rules/spells/spells/dominate-monster.html" class="internal-link" target="_self" rel="noopener nofollow">Dominate Monster</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="ltr">C</td>
+</tr>
+<tr>
+<td dir="ltr">Level 8</td>
+<td dir="ltr"><a data-href="Glibness" href="rules/spells/spells/glibness.html" class="internal-link" target="_self" rel="noopener nofollow">Glibness</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 8</td>
+<td dir="ltr"><a data-href="Mind Blank" href="rules/spells/spells/mind-blank.html" class="internal-link" target="_self" rel="noopener nofollow">Mind Blank</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 8</td>
+<td dir="ltr"><a data-href="Power Word Stun" href="rules/spells/spells/power-word-stun.html" class="internal-link" target="_self" rel="noopener nofollow">Power Word Stun</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 9</td>
+<td dir="ltr"><a data-href="Foresight" href="rules/spells/spells/foresight.html" class="internal-link" target="_self" rel="noopener nofollow">Foresight</a></td>
+<td dir="ltr">Divination</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 9</td>
+<td dir="ltr"><a data-href="Power Word Heal" href="rules/spells/spells/power-word-heal.html" class="internal-link" target="_self" rel="noopener nofollow">Power Word Heal</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 9</td>
+<td dir="ltr"><a data-href="Power Word Kill" href="rules/spells/spells/power-word-kill.html" class="internal-link" target="_self" rel="noopener nofollow">Power Word Kill</a></td>
+<td dir="ltr">Enchantment</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 9</td>
+<td dir="ltr"><a data-href="Prismatic Wall" href="rules/spells/spells/prismatic-wall.html" class="internal-link" target="_self" rel="noopener nofollow">Prismatic Wall</a></td>
+<td dir="ltr">Abjuration</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">Level 9</td>
+<td dir="ltr"><a data-href="True Polymorph" href="rules/spells/spells/true-polymorph.html" class="internal-link" target="_self" rel="noopener nofollow">True Polymorph</a></td>
+<td dir="ltr">Transmutation</td>
+<td dir="ltr">C</td>
+</tr>
+</tbody>
+</table></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item" data-depth="1"><a class="tree-item-self is-clickable" href="rules/spells/bard-spells.html#Bard_Spells_0" data-path="#Bard_Spells_0"><div class="tree-item-inner heading-link" heading-name="Bard Spells">Bard Spells</div></a><div class="tree-item-children"></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></div></body></html>
