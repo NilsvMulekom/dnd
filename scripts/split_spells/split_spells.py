@@ -9,8 +9,11 @@ from convenience_functions import print_spell_book, write_spell_files, create_ou
 # TODO: add metadata as obsidian metadata
 # TODO: Add scripts for dnd classes and potentially other things
     
-def add_spell_to_book(spell_book:SpellBook, spell:Spell) -> SpellBook:
-    spell_book[spell.name] = spell
+def add_spell_to_book(spell_book:SpellBook, spell:Spell, file_open: bool) -> SpellBook:
+    # TODO: replace file open with check if spell name is not empty
+    # Save any open file to spell_book before opening a new one
+    if file_open:
+        spell_book[spell.name] = spell
     return spell_book
 
 def split_files(input_file) -> SpellBook:
@@ -25,20 +28,16 @@ def split_files(input_file) -> SpellBook:
     
     for line in file_content.splitlines():
         if line.startswith("#### "):
-            if file_open:
-                # Save any open file to spell_book before opening a new one
-                spell_book[open_spell.name] = open_spell
-                open_spell : Spell = Spell(name="", content=[])
-                file_open = False
+            add_spell_to_book(spell_book, open_spell, file_open)
             # Cut off the first 5 characters to get the spell name
             spell_name: str = line[5:]
-            open_spell.name = spell_name
+            open_spell : Spell = Spell(name=spell_name, content=[])
             file_open = True
         open_spell.content.append(line)
 
     # Add the last spell to the spell_book if there is one open
     if file_open:
-        spell_book[open_spell.name] = open_spell
+        add_spell_to_book(spell_book, open_spell, file_open)
 
     return spell_book
 
