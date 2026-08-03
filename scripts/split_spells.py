@@ -83,43 +83,30 @@ def split_files(input_file) -> dict[str, dict[str, list[str]]]:
 
     return spell_book
 
-def add_linking(spell_book: dict[str, dict[str, list[str]]]) -> dict[str, dict[str, list[str]]]:
-    # TODO: Fix
-
+def add_linking(spell_book: dict[str, dict[str, list[str]]]) -> dict[str, dict[str, list[str]]]:      
     linked_book: dict[str, dict[str, list[str]]] = {}
-    linked_book = spell_book
+
     for file_name, spell_dict in spell_book.items():
-        spell_body: list[str]
-        spell_body = spell_dict["content"]
-        for line in spell_dict:
+        spell_body: list[str] = []
+        for line in spell_dict["content"]:
             new_line = line
             for pattern in PATTERN_LIST:
                 new_line=re.sub(pattern, f"[[{pattern}]]",new_line)
             spell_body.append(new_line)
-        linked_book[file_name]["content"] = spell_body
-    
-    
-    # for file_name, file_contents in spell_book.items():
-    #     spell_body = []
-    #     for index, line in enumerate(file_contents):
-    #         new_line = line
-    #         for pattern in PATTERN_LIST:
-    #             new_line=re.sub(pattern, f"[[{pattern}]]",new_line)
-    #         spell_body.append(new_line)
-    #     linked_book[file_name] = spell_body
-            
+        linked_book[file_name] = {"content": spell_body}
+
     return linked_book
     
 def main(input_file, output_directory):
     spell_book: dict[str, dict[str, list[str]]] = {}
     create_output_dir(output_directory)
     spell_book = split_files(input_file)
-    # print_spell_book(spell_book)
-    write_files(spell_book, output_directory)
+    print_spell_book(spell_book)
+    # write_files(spell_book, output_directory)
     # spell_book = add_linking(spell_book)
     # print_spell_book(spell_book)
     # write_files(spell_book, output_directory)
 
 
 
-main("reduced_spells.md", "spells_folder")
+main("input_folder/reduced_spells.md", "spells_folder")
