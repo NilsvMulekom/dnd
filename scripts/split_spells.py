@@ -3,10 +3,10 @@ from pathlib import Path
 import shutil
 import re
 
-# TODO: Fill automatic linking list
+# TODO: Fill automatic linking PATTERN_LIST
 # TODO: Automatic table forming
 # TODO: add metadata as obsidian metadata
-# TODO: Add scripts for classes and potentially other things
+# TODO: Add scripts for dnd classes and potentially other things
 
 @dataclass
 class Spell:
@@ -41,19 +41,18 @@ def print_spell_book(spell_book: SpellBook):
         for index, line in enumerate(spell_obj.content):
             print(f"{index}: {line}")
 
-def write_files(spell_book: SpellBook, output_directory: str):
+def write_spell_files(spell_book: SpellBook, output_directory: str):
     for spell_name, spell_obj in spell_book.items():
         write_file(spell_name, spell_obj.content, output_directory)
-            
-def write_file(spell_title: str, file_body: list[str], output_path: str):
-    # TODO: Change to take spells instead of separate title and body
-    file_name: str = f"{spell_title}.md"
+        
+def write_file(file_title: str, file_body: list[str], output_path: str):
+    file_name: str = f"{file_title}.md"
     output_file = Path(output_path) / file_name
     
     with open(output_file, "w", encoding="utf-8") as file:
-        for index, line in enumerate(file_body):
+        for line in file_body:
             file.write(f"{line}\n")
-            
+
 def create_output_dir(output_directory: str):
     output_path = Path(output_directory)
     # Create output dir, if it already exists delete the old version first
@@ -115,6 +114,6 @@ def main(input_file, output_directory):
     spell_book = split_files(input_file)
     spell_book = add_linking(spell_book)
     print_spell_book(spell_book)
-    write_files(spell_book, output_directory)
+    write_spell_files(spell_book, output_directory)
 
 main("input_folder/reduced_spells.md", "spells_folder")
