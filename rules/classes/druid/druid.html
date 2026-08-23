@@ -1,0 +1,468 @@
+<!DOCTYPE html> <html lang="en-gb"><head>
+<title>Druid</title>
+<base href="../../..">
+<meta name="pathname" content="rules/classes/druid/druid.html">
+<meta name="description" content="Obsidian Vault - Druid">
+<meta property="og:title" content="Druid">
+<meta property="og:description" content="Obsidian Vault - Druid">
+<meta property="og:type" content="website">
+<meta property="og:url" content="rules/classes/druid/druid.html">
+<meta property="og:image" content="undefined">
+<meta charset="UTF-8"><meta property="og:site_name" content="Obsidian Vault"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:calc(2.3em + 2 * var(--sidebar-margin));width:var(--sidebar-width);padding:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row;border-top-right-radius:var(--radius-l)}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse;border-top-left-radius:var(--radius-l)}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:1px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#navbar:not(:empty){display:flex;align-items:center;justify-content:space-between;padding:.5em 1em;width:100%}#main{display:flex;flex-direction:column;height:100%;width:100%;align-items:stretch;justify-content:center}#main-horizontal{display:flex;flex-direction:row;flex-grow:1;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math,table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const n=await fetch(e);if(!n.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await n.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let n=document.createRange().createContextualFragment(o);t.before(n),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(n){let l=o[n],c=n+1;l?(l&&"true"!=l.getAttribute("loaded")||n<o.length&&e(c),n<o.length&&l.addEventListener("load",(()=>e(c)))):n<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager styled-scrollbars show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><h1 class="page-title heading inline-title" id="Druid_0">Druid</h1><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-h4"><h4 data-heading="Core Traits" dir="auto" class="heading" id="Core_Traits_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Core Traits</h4></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Trait</th>
+<th dir="ltr">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Primary Ability</td>
+<td dir="ltr">Wisdom</td>
+</tr>
+<tr>
+<td dir="ltr">Hit Point Die</td>
+<td dir="ltr">D8 per Druid level</td>
+</tr>
+<tr>
+<td dir="ltr">Hit Points at Level 1</td>
+<td dir="ltr">8 + Con. modifier</td>
+</tr>
+<tr>
+<td dir="ltr">Hit Points per additional Druid Level</td>
+<td dir="ltr">D8 + your Con. modifier, or, 5 + your Con. modifier</td>
+</tr>
+<tr>
+<td dir="ltr">Saving Throw Proficiencies</td>
+<td dir="ltr">Intelligence, Wisdom</td>
+</tr>
+<tr>
+<td dir="ltr">Skill Proficiencies</td>
+<td dir="ltr">Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival.</td>
+</tr>
+<tr>
+<td dir="ltr">Weapon Proficiencies</td>
+<td dir="ltr">Simple weapons</td>
+</tr>
+<tr>
+<td dir="ltr">Tool Proficiencies</td>
+<td dir="ltr">Herbalism Kit</td>
+</tr>
+<tr>
+<td dir="ltr">Armor Training</td>
+<td dir="ltr">Light armor and Shields</td>
+</tr>
+<tr>
+<td dir="ltr">Starting Equipment</td>
+<td dir="ltr">Choose A or B: (A) Leather Armor, <a data-href="Shield" href="rules/spells/spells/shield.html" class="internal-link" target="_self" rel="noopener nofollow">Shield</a>, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism kit, 9 GP; or (B) 50 GP</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4"><h4 data-heading="Multiclassing" dir="auto" class="heading" id="Multiclassing_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Multiclassing</h4></div><div class="el-p"><p dir="auto">To qualify for a new class, you must have a score of at least 13 in the primary ability of the new class and your current classes.<br>
+Armor Training: Light armor and Shields</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Level</th>
+<th dir="ltr">Proficiency Bonus</th>
+<th dir="ltr">Features</th>
+<th dir="ltr">Wild Shape</th>
+<th dir="ltr">Cantrips</th>
+<th dir="ltr">Prepared <a data-href="Spells" href="rules/spells/spells.html" class="internal-link" target="_self" rel="noopener nofollow">Spells</a></th>
+<th dir="ltr">1st</th>
+<th dir="ltr">2nd</th>
+<th dir="ltr">3rd</th>
+<th dir="ltr">4th</th>
+<th dir="ltr">5th</th>
+<th dir="ltr">6th</th>
+<th dir="ltr">7th</th>
+<th dir="ltr">8th</th>
+<th dir="ltr">9th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">1st</td>
+<td dir="auto">+2</td>
+<td dir="ltr">Druidic, Primal Order, Spellcasting</td>
+<td dir="auto">—</td>
+<td dir="auto">2</td>
+<td dir="auto">4</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">2nd</td>
+<td dir="auto">+2</td>
+<td dir="ltr">Wild Companion, Wild Shape</td>
+<td dir="auto">2</td>
+<td dir="auto">2</td>
+<td dir="auto">5</td>
+<td dir="auto">3</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">3rd</td>
+<td dir="auto">+2</td>
+<td dir="ltr">Druid Subclass</td>
+<td dir="auto">2</td>
+<td dir="auto">2</td>
+<td dir="auto">6</td>
+<td dir="auto">4</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">4th</td>
+<td dir="auto">+2</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">2</td>
+<td dir="auto">3</td>
+<td dir="auto">7</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">5th</td>
+<td dir="auto">+3</td>
+<td dir="ltr">Wild Resurgence</td>
+<td dir="auto">2</td>
+<td dir="auto">3</td>
+<td dir="auto">9</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">6th</td>
+<td dir="auto">+3</td>
+<td dir="ltr">Subclass Feature</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">10</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">7th</td>
+<td dir="auto">+3</td>
+<td dir="ltr">Elemental Fury</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">11</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">8th</td>
+<td dir="auto">+3</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">12</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">9th</td>
+<td dir="auto">+4</td>
+<td dir="auto">—</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">14</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">10th</td>
+<td dir="auto">+4</td>
+<td dir="ltr">Subclass Feature</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">15</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">11th</td>
+<td dir="auto">+4</td>
+<td dir="auto">—</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">16</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">12th</td>
+<td dir="auto">+4</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">16</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">13th</td>
+<td dir="auto">+5</td>
+<td dir="auto">—</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">17</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">14th</td>
+<td dir="auto">+5</td>
+<td dir="ltr">Subclass Feature</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">17</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">15th</td>
+<td dir="auto">+5</td>
+<td dir="ltr">Improved Elemental Fury</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">18</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">16th</td>
+<td dir="auto">+5</td>
+<td dir="ltr">Ability Score Improvement</td>
+<td dir="auto">3</td>
+<td dir="auto">4</td>
+<td dir="auto">18</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">—</td>
+</tr>
+<tr>
+<td dir="ltr">17th</td>
+<td dir="auto">+6</td>
+<td dir="auto">—</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">19</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+<tr>
+<td dir="ltr">18th</td>
+<td dir="auto">+6</td>
+<td dir="ltr">Beast <a data-href="Spells" href="rules/spells/spells.html" class="internal-link" target="_self" rel="noopener nofollow">Spells</a></td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">20</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+<tr>
+<td dir="ltr">19th</td>
+<td dir="auto">+6</td>
+<td dir="ltr">Epic Boon</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">21</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+<tr>
+<td dir="ltr">20th</td>
+<td dir="auto">+6</td>
+<td dir="ltr">Archdruid</td>
+<td dir="auto">4</td>
+<td dir="auto">4</td>
+<td dir="auto">22</td>
+<td dir="auto">4</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">3</td>
+<td dir="auto">2</td>
+<td dir="auto">2</td>
+<td dir="auto">1</td>
+<td dir="auto">1</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="Level 1: Druidic" dir="auto" class="heading" id="Level_1_Druidic_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 1: Druidic</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Druidic" src="rules/classes/druid/classabilities/druidic.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Druidic</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 159px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">You know Druidic, the secret language of Druids. While learning this ancient tongue, you also unlocked the magic of communicating with animals; you always have the <a data-href="Speak with Animals" href="rules/spells/spells/speak-with-animals.html" class="internal-link" target="_self" rel="noopener nofollow">Speak with Animals</a> spell prepared.</p></div><div class="el-p"><p dir="auto">You can use Druidic to leave hidden messages. You and others who know Druidic automatically spot such a message. Others spot the message's presence with a successful DC 15 Intelligence (Investigation) check but can't decipher it without magic.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 1: Primal Order" dir="auto" class="heading" id="Level_1_Primal_Order_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 1: Primal Order</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Primal Order" src="rules/classes/druid/classabilities/primal-order.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Primal Order</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 308px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">You have dedicated yourself to one of the following sacred roles of your choice.</p></div><div class="el-h4"><h4 data-heading="Magician" dir="auto" class="heading" id="Magician_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Magician</h4></div><div class="el-p"><p dir="auto">You know one extra cantrip from the <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> spell list. In addition, your mystical connection to nature gives you a bonus to your Intelligence (Arcana or Nature) checks. The bonus equals your Wisdom modifier (minimum bonus of +1).</p></div><div class="el-h4"><h4 data-heading="Warden" dir="auto" class="heading" id="Warden_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Warden</h4></div><div class="el-p"><p dir="auto">Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 1: Spellcasting" dir="auto" class="heading" id="Level_1_Spellcasting_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 1: Spellcasting</h2></div><div class="el-p"><p dir="auto">You have learned to cast spells through studying the mystical forces of nature. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Druid spells, which appear on the Druid spell list later in the class's description.</p></div><div class="el-h4"><h4 data-heading="Cantrips" dir="auto" class="heading" id="Cantrips_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Cantrips</h4></div><div class="el-p"><p dir="auto">You know two cantrips of your choice from the Druid spell list. <a data-href="Druidcraft" href="rules/spells/spells/druidcraft.html" class="internal-link" target="_self" rel="noopener nofollow">Druidcraft</a> and <a data-href="Produce Flame" href="rules/spells/spells/produce-flame.html" class="internal-link" target="_self" rel="noopener nofollow">Produce Flame</a> are recommended.<br>
+Whenever you gain a Druid level, you can replace one of your cantrips with another cantrip of your choice from the Druid spell list.</p></div><div class="el-p"><p dir="auto">When you reach Druid levels 4 and 10, you learn another cantrip of your choice from the Druid spell list, as shown in the Cantrips column of the Druid Features table.</p></div><div class="el-h4"><h4 data-heading="Spell Slots" dir="auto" class="heading" id="Spell_Slots_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Spell Slots</h4></div><div class="el-p"><p dir="auto">The Druid Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.</p></div><div class="el-h4"><h4 data-heading="Prepared Spells of Level 1+" dir="auto" class="heading" id="Prepared_Spells_of_Level_1+_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Prepared Spells of Level 1+</h4></div><div class="el-p"><p dir="auto">You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Druid spell list. <a data-href="Animal Friendship" href="rules/spells/spells/animal-friendship.html" class="internal-link" target="_self" rel="noopener nofollow">Animal Friendship</a>, <a data-href="Cure Wounds" href="rules/spells/spells/cure-wounds.html" class="internal-link" target="_self" rel="noopener nofollow">Cure Wounds</a>, <a data-href="Faerie Fire" href="rules/spells/spells/faerie-fire.html" class="internal-link" target="_self" rel="noopener nofollow">Faerie Fire</a>, and <a data-href="Thunderwave" href="rules/spells/spells/thunderwave.html" class="internal-link" target="_self" rel="noopener nofollow">Thunderwave</a> are recommended.<br>
+The number of spells on your list increases as you gain Druid levels, as shown in the Prepared <a data-href="Spells" href="rules/spells/spells.html" class="internal-link" target="_self" rel="noopener nofollow">Spells</a> column of the Druid Features table. Whenever that number increases, choose additional spells from the Druid spell list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 3 Druid, your list of prepared spells can include six spells of levels 1 and 2 in any combination.</p></div><div class="el-p"><p dir="auto">If another Druid feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Druid spells for you.</p></div><div class="el-h4"><h4 data-heading="Changing Your Prepared Spells" dir="auto" class="heading" id="Changing_Your_Prepared_Spells_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Changing Your Prepared Spells</h4></div><div class="el-p"><p dir="auto">Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells with other Druid spells for which you have spell slots.</p></div><div class="el-h4"><h4 data-heading="Spellcasting Ability" dir="auto" class="heading" id="Spellcasting_Ability_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Spellcasting Ability</h4></div><div class="el-p"><p dir="auto">Wisdom is your spellcasting ability for your Druid spells.</p></div><div class="el-h4"><h4 data-heading="Spellcasting Focus" dir="auto" class="heading" id="Spellcasting_Focus_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Spellcasting Focus</h4></div><div class="el-p"><p dir="auto">You can use a Druidic Focus as a Spellcasting Focus for your Druid spells.</p></div><div class="el-h2"><h2 data-heading="Level 2: Wild Companion" dir="auto" class="heading" id="Level_2_Wild_Companion_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 2: Wild Companion</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Wild Companion" src="rules/classes/druid/classabilities/wild-companion.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Wild Companion</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 135px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">You can summon a nature spirit that assumes an animal form to aid you. As a Magic action, you can expend a spell slot or a use of Wild Shape to cast the <a data-href="Find Familiar" href="rules/spells/spells/find-familiar.html" class="internal-link" target="_self" rel="noopener nofollow">Find Familiar</a> spell without Material components.</p></div><div class="el-p"><p dir="auto">When you cast the spell in this way, the familiar is Fey and disappears when you finish a Long Rest.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 2: Wild Shape" dir="auto" class="heading" id="Level_2_Wild_Shape_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 2: Wild Shape</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Wild Shape" src="rules/classes/druid/classabilities/wild-shape.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Wild Shape</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 1436px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">The power of nature allows you to assume the form of an animal. As a Bonus Action, you shape-shift into a Beast form that you have learned for this feature (see "Known Forms" below). You stay in that form for a number of hours equal to half your <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> level or until you use Wild Shape again, have the <a data-href="Incapacitated" href="rules/glossary/glossary/conditions/conditions/incapacitated.html" class="internal-link" target="_self" rel="noopener nofollow">Incapacitated</a> condition, or die. You can also leave the form early as a Bonus Action.</p></div><div class="el-h4"><h4 data-heading="Number of Uses" dir="auto" class="heading" id="Number_of_Uses_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Number of Uses</h4></div><div class="el-p"><p dir="auto">You can use Wild Shape twice. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.<br>
+You gain additional uses when you reach certain <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> levels, as shown in the Wild Shape column of the <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> Features table.</p></div><div class="el-h4"><h4 data-heading="Known Forms" dir="auto" class="heading" id="Known_Forms_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Known Forms</h4></div><div class="el-p"><p dir="auto">You know four Beast forms for this feature, chosen from among Beast stat blocks that have a maximum Challenge Rating of 1/4 and that lack a Fly Speed (see appendix B for stat block options). The Rat, Riding Horse, Spider, and Wolf are recommended. Whenever you finish a Long Rest, you can replace one of your known forms with another eligible form.<br>
+When you reach certain <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> levels, your number of known forms and the maximum Challenge Rating for those forms increases, as shown in the Beast Shapes table. In addition, starting at level 8, you can adopt a form that has a Fly Speed.</p></div><div class="el-p"><p dir="auto">When choosing known forms, you may look in the Monster Manual or elsewhere for eligible Beasts if the Dungeon Master permits you to do so.</p></div><div class="el-h4"><h4 data-heading="Beast Shapes" dir="auto" class="heading" id="Beast_Shapes_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Beast Shapes</h4></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th align="center" dir="ltr"><a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> Level</th>
+<th align="center" dir="ltr">Known Forms</th>
+<th align="center" dir="ltr">Max CR</th>
+<th dir="ltr">Fly Speed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" dir="auto">2</td>
+<td align="center" dir="auto">4</td>
+<td align="center" dir="auto">1/4</td>
+<td dir="ltr">No</td>
+</tr>
+<tr>
+<td align="center" dir="auto">4</td>
+<td align="center" dir="auto">6</td>
+<td align="center" dir="auto">1/2</td>
+<td dir="ltr">No</td>
+</tr>
+<tr>
+<td align="center" dir="auto">8</td>
+<td align="center" dir="auto">8</td>
+<td align="center" dir="auto">1</td>
+<td dir="ltr">Yes</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4"><h4 data-heading="Rules While Shape-Shifted" dir="auto" class="heading" id="Rules_While_Shape-Shifted_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Rules While Shape-Shifted</h4></div><div class="el-p"><p dir="auto">While in a form, you retain your personality, memories, and ability to speak, and the following rules apply:</p></div><div class="el-ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>Temporary Hit Points. When you assume a Wild Shape form, you gain a number of Temporary Hit Points equal to your <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> level.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>Game Statistics. Your game statistics are replaced by the Beast's stat block, but you retain your creature type; Hit Points; Hit Point Dice; Intelligence, Wisdom, and Charisma scores; class features; languages; and feats. You also retain your skill and saving throw proficiencies and use your Proficiency Bonus for them, in addition to gaining the proficiencies of the creature. If a skill or saving throw modifier in the Beast's stat block is higher than yours, use the one in the stat block.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>No Spellcasting. You can't cast spells, but shape-shifting doesn't break your Concentration or otherwise interfere with a spell you've already cast.</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>Objects. Your ability to handle objects is determined by the form's limbs rather than your own. In addition, you choose whether your equipment falls in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it's practical for the new form to wear a piece of equipment based on the creature's size and shape. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with the form. Equipment that merges with the form has no effect while you're in that form.</li>
+</ul></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 3: Druid Subclass" dir="auto" class="heading" id="Level_3_Druid_Subclass_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 3: Druid Subclass</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Druid Subclass" src="rules/classes/druid/classabilities/druid-subclass.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Druid Subclass</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 71px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">You gain a <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> subclass of your choice. A subclass is a specialization that grants you features at certain <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> levels. For the rest of your career, you gain each of your subclass's features that are of your <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> level or lower.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 4: Ability Score Improvement" dir="auto" class="heading" id="Level_4_Ability_Score_Improvement_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 4: Ability Score Improvement</h2></div><div class="el-p"><p dir="auto">You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.</p></div><div class="el-h2"><h2 data-heading="Level 5: Wild Resurgence" dir="auto" class="heading" id="Level_5_Wild_Resurgence_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 5: Wild Resurgence</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Wild Resurgence" src="rules/classes/druid/classabilities/wild-resurgence.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Wild Resurgence</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 111px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).</p></div><div class="el-p"><p dir="auto">In addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 6: Subclass Feature" dir="auto" class="heading" id="Level_6_Subclass_Feature_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 6: Subclass Feature</h2></div><div class="el-p"><p dir="auto">You gain a feature from your Druid Subclass.</p></div><div class="el-h2"><h2 data-heading="Level 7: Elemental Fury" dir="auto" class="heading" id="Level_7_Elemental_Fury_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 7: Elemental Fury</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Elemental Fury" src="rules/classes/druid/classabilities/elemental-fury.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Elemental Fury</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 308px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">The might of the elements flows through you. You gain one of the following options of your choice.</p></div><div class="el-h4"><h4 data-heading="Potent Spellcasting" dir="auto" class="heading" id="Potent_Spellcasting_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Potent Spellcasting</h4></div><div class="el-p"><p dir="auto">Add your Wisdom modifier to the damage you deal with any <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> cantrip.</p></div><div class="el-h4"><h4 data-heading="Primal Strike" dir="auto" class="heading" id="Primal_Strike_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Primal Strike</h4></div><div class="el-p"><p dir="auto">Once on each of your turns when you hit a creature with an attack roll using a weapon or a Beast form's attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 8: Ability Score Improvement" dir="auto" class="heading" id="Level_8_Ability_Score_Improvement_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 8: Ability Score Improvement</h2></div><div class="el-p"><p dir="auto">You gain the Ability Score Improvement Feat or another feat of your choice for which you qualify.</p></div><div class="el-h2"><h2 data-heading="Level 10: Subclass Feature" dir="auto" class="heading" id="Level_10_Subclass_Feature_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 10: Subclass Feature</h2></div><div class="el-p"><p dir="auto">You gain a feature from your Druid Subclass.</p></div><div class="el-h2"><h2 data-heading="Level 12: Ability Score Improvement" dir="auto" class="heading" id="Level_12_Ability_Score_Improvement_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 12: Ability Score Improvement</h2></div><div class="el-p"><p dir="auto">You gain the Ability Score Improvement Feat or another feat of your choice for which you qualify.</p></div><div class="el-h2"><h2 data-heading="Level 14: Subclass Feature" dir="auto" class="heading" id="Level_14_Subclass_Feature_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 14: Subclass Feature</h2></div><div class="el-p"><p dir="auto">You gain a feature from your Druid Subclass.</p></div><div class="el-h2"><h2 data-heading="Level 15: Improved Elemental Fury" dir="auto" class="heading" id="Level_15_Improved_Elemental_Fury_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 15: Improved Elemental Fury</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Improved Elemental Fury" src="rules/classes/druid/classabilities/improved-elemental-fury.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Improved Elemental Fury</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 260px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">The option you chose for Elemental Fury grows more powerful, as detailed below.</p></div><div class="el-h4"><h4 data-heading="Potent Spellcasting" dir="auto" class="heading" id="Potent_Spellcasting_1"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Potent Spellcasting</h4></div><div class="el-p"><p dir="auto">When you cast a <a data-href="Druid" href="rules/classes/druid/druid.html" class="internal-link" target="_self" rel="noopener nofollow">Druid</a> cantrip with a range of 10 feet or greater, the spell's range increases by 300 feet.</p></div><div class="el-h4"><h4 data-heading="Primal Strike" dir="auto" class="heading" id="Primal_Strike_1"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Primal Strike</h4></div><div class="el-p"><p dir="auto">The extra damage of your Primal Strike increases to 2d8.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 16: Ability Score Improvement" dir="auto" class="heading" id="Level_16_Ability_Score_Improvement_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 16: Ability Score Improvement</h2></div><div class="el-p"><p dir="auto">You gain the Ability Score Improvement Feat or another feat of your choice for which you qualify.</p></div><div class="el-h2"><h2 data-heading="Level 18: Beast Spells" dir="auto" class="heading" id="Level_18_Beast_Spells_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 18: Beast Spells</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Beast Spells" src="rules/classes/druid/classabilities/beast-spells.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Beast Spells</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 47px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h2"><h2 data-heading="Level 19: Epic Boon" dir="auto" class="heading" id="Level_19_Epic_Boon_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 19: Epic Boon</h2></div><div class="el-p"><p dir="auto">You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p></div><div class="el-h2"><h2 data-heading="Level 20: Archdruid" dir="auto" class="heading" id="Level_20_Archdruid_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Level 20: Archdruid</h2></div><div class="el-p"><span style="display: block; margin-block-start: var(--p-spacing); margin-block-end: var(--p-spacing);"><span alt="Archdruid" src="rules/classes/druid/classabilities/archdruid.html" class="internal-embed markdown-embed inline-embed is-loaded" target="_self"><div class="embed-title markdown-embed-title">Archdruid</div><div class="markdown-embed-content node-insert-event"><div class="markdown-preview-view markdown-rendered node-insert-event show-indentation-guide allow-fold-headings allow-fold-lists show-properties"><div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 0px; min-height: 463px;"><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-p"><p dir="auto">The vitality of nature constantly blooms within you, granting you the following benefits.</p></div><div class="el-h4"><h4 data-heading="Evergreen Wild Shape" dir="auto" class="heading" id="Evergreen_Wild_Shape_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Evergreen Wild Shape</h4></div><div class="el-p"><p dir="auto">Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.</p></div><div class="el-h4"><h4 data-heading="Nature Magician" dir="auto" class="heading" id="Nature_Magician_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Nature Magician</h4></div><div class="el-p"><p dir="auto">You can convert uses of Wild Shape into a spell slot (no action required). Choose a number of your unexpended uses of Wild Shape and convert them into a single spell slot, with each use contributing 2 spell levels. For example, if you convert two uses of Wild Shape, you produce a level 4 spell slot. Once you use this benefit, you can't do so again until you finish a Long Rest.</p></div><div class="el-h4"><h4 data-heading="Longevity" dir="auto" class="heading" id="Longevity_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Longevity</h4></div><div class="el-p"><p dir="auto">The primal magic that you wield causes you to age more slowly. For every ten years that pass, your body ages only one year.</p></div></div></div></div><div class="markdown-embed-content node-insert-event" style="display: none;"></div><div class="markdown-embed-link" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-maximize-2"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></div><p></p></span></span></div><div class="el-h1"><h1 data-heading="Sub Classes:" dir="auto" class="heading" id="Sub_Classes_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Sub Classes:</h1></div><div class="el-p"><p dir="auto"><a data-href="Circle of Dreams" href="rules/classes/druid/subclasses/circle-of-dreams.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of Dreams</a><br>
+<a data-href="Circle of Spores" href="rules/classes/druid/subclasses/circle-of-spores.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of Spores</a><br>
+<a data-href="Circle of the Land" href="rules/classes/druid/subclasses/circle-of-the-land.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of the Land</a><br>
+<a data-href="Circle of the Moon" href="rules/classes/druid/subclasses/circle-of-the-moon.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of the Moon</a><br>
+<a data-href="Circle of the Sea" href="rules/classes/druid/subclasses/circle-of-the-sea.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of the Sea</a><br>
+<a data-href="Circle of the Shepherd" href="rules/classes/druid/subclasses/circle-of-the-shepherd.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of the Shepherd</a><br>
+<a data-href="Circle of the Stars" href="rules/classes/druid/subclasses/circle-of-the-stars.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of the Stars</a><br>
+<a data-href="Circle of Wildfire" href="rules/classes/druid/subclasses/circle-of-wildfire.html" class="internal-link" target="_self" rel="noopener nofollow">Circle of Wildfire</a></p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item mod-collapsible" data-depth="1"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Druid_0" data-path="#Druid_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Druid">Druid</div></a><div class="tree-item-children"><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Core_Traits_0" data-path="#Core_Traits_0"><div class="tree-item-inner heading-link" heading-name="Core Traits">Core Traits</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Multiclassing_0" data-path="#Multiclassing_0"><div class="tree-item-inner heading-link" heading-name="Multiclassing">Multiclassing</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_1_Druidic_0" data-path="#Level_1_Druidic_0"><div class="tree-item-inner heading-link" heading-name="Level 1: Druidic">Level 1: Druidic</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Level_1_Primal_Order_0" data-path="#Level_1_Primal_Order_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 1: Primal Order">Level 1: Primal Order</div></a><div class="tree-item-children"><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Magician_0" data-path="#Magician_0"><div class="tree-item-inner heading-link" heading-name="Magician">Magician</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Warden_0" data-path="#Warden_0"><div class="tree-item-inner heading-link" heading-name="Warden">Warden</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Level_1_Spellcasting_0" data-path="#Level_1_Spellcasting_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 1: Spellcasting">Level 1: Spellcasting</div></a><div class="tree-item-children"><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Cantrips_0" data-path="#Cantrips_0"><div class="tree-item-inner heading-link" heading-name="Cantrips">Cantrips</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Spell_Slots_0" data-path="#Spell_Slots_0"><div class="tree-item-inner heading-link" heading-name="Spell Slots">Spell Slots</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Prepared_Spells_of_Level_1+_0" data-path="#Prepared_Spells_of_Level_1+_0"><div class="tree-item-inner heading-link" heading-name="Prepared Spells of Level 1+">Prepared Spells of Level 1+</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Changing_Your_Prepared_Spells_0" data-path="#Changing_Your_Prepared_Spells_0"><div class="tree-item-inner heading-link" heading-name="Changing Your Prepared Spells">Changing Your Prepared Spells</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Spellcasting_Ability_0" data-path="#Spellcasting_Ability_0"><div class="tree-item-inner heading-link" heading-name="Spellcasting Ability">Spellcasting Ability</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Spellcasting_Focus_0" data-path="#Spellcasting_Focus_0"><div class="tree-item-inner heading-link" heading-name="Spellcasting Focus">Spellcasting Focus</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_2_Wild_Companion_0" data-path="#Level_2_Wild_Companion_0"><div class="tree-item-inner heading-link" heading-name="Level 2: Wild Companion">Level 2: Wild Companion</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Level_2_Wild_Shape_0" data-path="#Level_2_Wild_Shape_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 2: Wild Shape">Level 2: Wild Shape</div></a><div class="tree-item-children"><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Number_of_Uses_0" data-path="#Number_of_Uses_0"><div class="tree-item-inner heading-link" heading-name="Number of Uses">Number of Uses</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Known_Forms_0" data-path="#Known_Forms_0"><div class="tree-item-inner heading-link" heading-name="Known Forms">Known Forms</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Beast_Shapes_0" data-path="#Beast_Shapes_0"><div class="tree-item-inner heading-link" heading-name="Beast Shapes">Beast Shapes</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Rules_While_Shape-Shifted_0" data-path="#Rules_While_Shape-Shifted_0"><div class="tree-item-inner heading-link" heading-name="Rules While Shape-Shifted">Rules While Shape-Shifted</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_3_Druid_Subclass_0" data-path="#Level_3_Druid_Subclass_0"><div class="tree-item-inner heading-link" heading-name="Level 3: Druid Subclass">Level 3: Druid Subclass</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_4_Ability_Score_Improvement_0" data-path="#Level_4_Ability_Score_Improvement_0"><div class="tree-item-inner heading-link" heading-name="Level 4: Ability Score Improvement">Level 4: Ability Score Improvement</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_5_Wild_Resurgence_0" data-path="#Level_5_Wild_Resurgence_0"><div class="tree-item-inner heading-link" heading-name="Level 5: Wild Resurgence">Level 5: Wild Resurgence</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_6_Subclass_Feature_0" data-path="#Level_6_Subclass_Feature_0"><div class="tree-item-inner heading-link" heading-name="Level 6: Subclass Feature">Level 6: Subclass Feature</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Level_7_Elemental_Fury_0" data-path="#Level_7_Elemental_Fury_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 7: Elemental Fury">Level 7: Elemental Fury</div></a><div class="tree-item-children"><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Potent_Spellcasting_0" data-path="#Potent_Spellcasting_0"><div class="tree-item-inner heading-link" heading-name="Potent Spellcasting">Potent Spellcasting</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Primal_Strike_0" data-path="#Primal_Strike_0"><div class="tree-item-inner heading-link" heading-name="Primal Strike">Primal Strike</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_8_Ability_Score_Improvement_0" data-path="#Level_8_Ability_Score_Improvement_0"><div class="tree-item-inner heading-link" heading-name="Level 8: Ability Score Improvement">Level 8: Ability Score Improvement</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_10_Subclass_Feature_0" data-path="#Level_10_Subclass_Feature_0"><div class="tree-item-inner heading-link" heading-name="Level 10: Subclass Feature">Level 10: Subclass Feature</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_12_Ability_Score_Improvement_0" data-path="#Level_12_Ability_Score_Improvement_0"><div class="tree-item-inner heading-link" heading-name="Level 12: Ability Score Improvement">Level 12: Ability Score Improvement</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_14_Subclass_Feature_0" data-path="#Level_14_Subclass_Feature_0"><div class="tree-item-inner heading-link" heading-name="Level 14: Subclass Feature">Level 14: Subclass Feature</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Level_15_Improved_Elemental_Fury_0" data-path="#Level_15_Improved_Elemental_Fury_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 15: Improved Elemental Fury">Level 15: Improved Elemental Fury</div></a><div class="tree-item-children"><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Potent_Spellcasting_1" data-path="#Potent_Spellcasting_1"><div class="tree-item-inner heading-link" heading-name="Potent Spellcasting">Potent Spellcasting</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Primal_Strike_1" data-path="#Primal_Strike_1"><div class="tree-item-inner heading-link" heading-name="Primal Strike">Primal Strike</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_16_Ability_Score_Improvement_0" data-path="#Level_16_Ability_Score_Improvement_0"><div class="tree-item-inner heading-link" heading-name="Level 16: Ability Score Improvement">Level 16: Ability Score Improvement</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_18_Beast_Spells_0" data-path="#Level_18_Beast_Spells_0"><div class="tree-item-inner heading-link" heading-name="Level 18: Beast Spells">Level 18: Beast Spells</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Level_19_Epic_Boon_0" data-path="#Level_19_Epic_Boon_0"><div class="tree-item-inner heading-link" heading-name="Level 19: Epic Boon">Level 19: Epic Boon</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="rules/classes/druid/druid.html#Level_20_Archdruid_0" data-path="#Level_20_Archdruid_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="Level 20: Archdruid">Level 20: Archdruid</div></a><div class="tree-item-children"><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Evergreen_Wild_Shape_0" data-path="#Evergreen_Wild_Shape_0"><div class="tree-item-inner heading-link" heading-name="Evergreen Wild Shape">Evergreen Wild Shape</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Nature_Magician_0" data-path="#Nature_Magician_0"><div class="tree-item-inner heading-link" heading-name="Nature Magician">Nature Magician</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="10"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Longevity_0" data-path="#Longevity_0"><div class="tree-item-inner heading-link" heading-name="Longevity">Longevity</div></a><div class="tree-item-children"></div></div></div></div></div></div><div class="tree-item" data-depth="1"><a class="tree-item-self is-clickable" href="rules/classes/druid/druid.html#Sub_Classes_0" data-path="#Sub_Classes_0"><div class="tree-item-inner heading-link" heading-name="Sub Classes:">Sub Classes:</div></a><div class="tree-item-children"></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></div></body></html>
